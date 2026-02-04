@@ -300,6 +300,9 @@
   "RandoSection": {
     "similarProperties": "Similar Properties"
   },
+  "BackButton": {
+    "back": "Back"
+  },
 
   "ContactUs": {
     "title": "Contact Us",

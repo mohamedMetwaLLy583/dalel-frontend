@@ -7,6 +7,7 @@ import RandoSection from '../../Components/DetailsComponents/RandoSection/RandoS
 import Gallery from '../../Components/DetailsComponents/Gallery/Gallery';
 import { notFound } from 'next/navigation';
 import PartinersSection from '../../Components/partinersSection/PartinersSection';
+import BackButton from '../../Components/DetailsComponents/BackButton/BackButton';
 import { cookies } from 'next/headers';
 
 export async function generateMetadata({ params: { locale, id } }) {
@@ -50,6 +51,7 @@ const getRealEstateDetails = async (id, locale) => {
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_DBURL}/api/properties/${id}`,
       {
+        cache: 'no-store',
         headers: {
           'Accept-Language': locale,
           Accept: 'application/json',
@@ -78,6 +80,7 @@ const relatedRealEstates = async (id, locale) => {
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_DBURL}/api/properties/related/${id}`,
       {
+        cache: 'no-store',
         headers: {
           'Accept-Language': locale,
           Accept: 'application/json',
@@ -115,6 +118,7 @@ const ForSaleDetailsContent = async ({ t, params }) => {
     return (
       <section className='py-[48px]'>
         <div className='custom_container'>
+          <BackButton locale={locale} />
           <div className='mb:[48px] md:mb-[82px] flex flex-col md:flex-row gap-x-[26px] gap-y-[32px]'>
             <div className='md:w-[50%] order-2 md:order-1 mb-[48px] md:mb-0'>
               <GalleryDescription

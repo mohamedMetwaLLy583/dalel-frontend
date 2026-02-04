@@ -296,6 +296,9 @@
   "RandoSection": {
     "similarProperties": "عقارات مشابهه"
   },
+  "BackButton": {
+    "back": "عودة"
+  },
 
   "ContactUs": {
     "title": "تواصل معنا",
