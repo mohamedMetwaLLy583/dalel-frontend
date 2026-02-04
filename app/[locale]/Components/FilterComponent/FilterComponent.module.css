@@ -1,0 +1,17 @@
+.placeholder {
+  color: #525252;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .placeholder {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  .placeholder {
+    font-size: 10px;
+  }
+}

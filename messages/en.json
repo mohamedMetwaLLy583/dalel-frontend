@@ -1,0 +1,396 @@
+{
+  "locale": "en",
+  "Preheader": "Stay Connected",
+  "preheaderWebname": "Asos Al-Qimah Contracting Company",
+  "copy": "© All rights reserved to Asos Al-Qimah Company 2024.",
+  "Navbar": {
+    "home": "Home",
+    "rent": "Rent",
+    "sale": "Sale",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "services": "Our Services",
+    "customer": "Our Customer",
+    "support": "Our Partners",
+    "brands": "Our Brands",
+    "locale": "AR",
+    "profile": "Our profile",
+    "products": "Products"
+  },
+  "ProductsPage": {
+    "category": {
+      "all": "All",
+      "raw": "Raw Meat",
+      "readytoeat": "Ready To Eat"
+    }
+  },
+  "Products": { "title": "Our Products" },
+  "Link": {
+    "applicationlink": "Inspection Request",
+    "showall": "Show All",
+    "KnowMore": "Know More",
+    "products": "Show All Products"
+  },
+
+  "Home": {
+    "formRatingRequired": "Form Rating Required",
+    "formNameLabel": "Your Name",
+    "formNameRequired": "Name is required.",
+    "formNamePlaceholder": "Enter your name",
+    "formCountryLabel": "Your Country",
+    "formCountryRequired": "Country is required.",
+    "formCountryPlaceholder": "Enter your country",
+    "formCommentLabel": "Your Comment",
+    "formCommentRequired": "Comment is required.",
+    "formCommentPlaceholder": "Enter your comment",
+    "formSuccessMessage": "Your form has been submitted successfully!",
+    "formSuccessMessagereview": "Your review has been submitted successfully!",
+    "formErrorMessage": "There was an error submitting your form.",
+    "formSubmitButton": "Submit",
+    "formRatingLabel": "Your Rating",
+    "forsaletitle": "Latest Properties for Sale",
+    "forsaledesc": "Discover the best offers for rent now in prime locations and at competitive prices",
+    "forrenttitle": "Latest Properties for Rent",
+    "forrentdesc": "Discover the best offers for rent now in prime locations and at competitive prices",
+    "break": {
+      "title": "You Request, We Create",
+      "desc": "We transform your idea into a fully customized product that suits your needs. Whether you need a new recipe for your restaurant's menu or a unique product that reflects your vision, we are committed to meeting your requests with the highest quality standards. Share your idea with us, and let us create an exceptional product that exceeds your expectations."
+    },
+
+    "productstitle": "Products",
+    "productsdesc": "Provide a variety of high-quality fresh meats, such as burgers, sausages, luncheon meats, and pre-seasoned meats ready to cook with the most delicious flavors.",
+    "servicestitle": "Our Services",
+    "servicesdesc": "We offer a wide range of services tailored to your needs.",
+    "aboutustitle": "About Us",
+    "aboutusdesc": "We are dedicated to providing excellent service and building long-term relationships.",
+    "aboususbutton": "Learn More",
+    "aboutusbutton_en": "Subscribe",
+    "chooseuslist": [
+      "We have a team of highly experienced engineers in executing various projects.",
+      "We provide tailored solutions that meet our clients' needs and ensure effective and sustainable results.",
+      "Our customer support team is always available to meet your needs and quickly resolve your issues.",
+      "We offer affordable prices that fit your budget and help you achieve your project goals.",
+      "Record of success in executing projects and ensuring client satisfaction at all times."
+    ],
+
+    "chooseustitle": "Why Choose Us?",
+    "chooseusdesc": "Our office combines expertise and dedication to provide exceptional services in the real estate field.",
+    "contactustitle": "Contact Us",
+    "contactusdesc": "Feel free to get in touch with us via phone or email.",
+
+    "contactustitlereview": "Share Your Feedback with Us",
+    "contactusdescreview": "We value your opinion! Rate your experience with us by selecting the appropriate number of stars and writing your comments. Your feedback helps us improve our service and provide the best experience for our customers.",
+    "contactusadress": "Address",
+    "contactustelephone": "Phone",
+    "contactusemail": "Email",
+    "contactussocials": "Social Links",
+
+    "formEmailPlaceholder": "Your Email",
+    "formEmailRequired": "Email is required.",
+    "formEmailInvalid": "Please enter a valid email.",
+    "formMessagePlaceholder": "Your Message",
+    "formMessageRequired": "Message is required.",
+
+    "ourprojectstitle": "Our Projects",
+
+    "ourprojectsdesc": "We provide comprehensive contracting services that include design, execution, and engineering supervision, with a focus on quality and innovation in every project."
+  },
+  "About": { "aboutuspretitle": "Integrated Real Estate Solutions" },
+
+  "Hero": {
+    "da3em": "Da3em",
+    "desc": "Launch towards digital success with Daem, your gateway to the integrated digital world.",
+    "start": "Start Now",
+    "services": "Our Services"
+  },
+  "Advantages": {
+    "da3em": "Da3em",
+    "title": "Advantages of Collaborating With",
+    "desc": "The Design of Your Project Will Be Different And Will Be The Reason Why You Will Be At The Top of Your Field.",
+    "cardTitle": "Creativity"
+  },
+
+  "HomeServices": {
+    "title": "Our Services"
+  },
+
+  "Testimonials": {
+    "title": "Our Clients' Testimonials",
+    "desc": "We take pride in our partnership with our clients and always strive to provide the best employment solutions that support their growth and sustainable success."
+  },
+  "ContactPage": {
+    "pageTitle": "Contact Us",
+    "pageDesc": "Your gateway to the world of digital marketing, mobile design, and computer programming",
+    "mapTitle": "Company Details",
+    "formTitle": "Contact Us",
+    "details": {
+      "address": "Address",
+      "phone": "Mobile Number",
+      "email": "Email",
+      "socials": "Social Links"
+    },
+    "contactForm": {
+      "name": "Full Name",
+      "email": "Email",
+      "phoneNum": "Mobile Number",
+      "servicesType": "Service Type",
+      "msg": "Message",
+      "namePlaceholder": "Enter your name",
+      "emailPlaceholder": "Enter your email",
+      "phoneNumPlaceholder": "Enter your mobile number",
+      "servicesTypePlaceholder": "Select the type of service",
+      "msgPlaceholder": "Enter your message",
+      "btn": "Send now",
+      "errors": {
+        "nameRequired": "This field is required",
+        "nameMinLength": "Name must be at least 3 characters",
+        "nameMaxLength": "Name must be less than 32 characters",
+        "emailRequired": "This field is required",
+        "emailPattern": "Please enter a valid email address",
+        "phoneRequired": "This field is required",
+        "phonePattern": "Phone number must be numeric",
+        "phoneMinLength": "Phone number must be at least 10 characters",
+        "phoneMaxLength": "Phone number must be less than 15 characters",
+        "messageMaxLength": "Message cannot exceed 255 characters"
+      }
+    },
+    "successMessage": "Your message has been successfully sent!",
+    "errorMessage": "Failed to send your message. Please try again."
+  },
+  "AboutUs": {
+    "message": "Our Message",
+    "pageTitle": "About Us",
+    "pageDesc": "Your gateway to the world of digital marketing, mobile design, and computer programming",
+    "team": "Our team",
+    "mission": "Our Message",
+    "vision": "Our Vision"
+  },
+  "Currency": "SR",
+
+  "Footer": {
+    "da3em": "da3em",
+    "rights": "All rights reserved to Daleel Al-Jawaa Real Estate Office 2024. Developed by",
+    "rightsafter": "For Programming and Marketing",
+    "links": {
+      "sale": "For Sale",
+      "rent": "For Rent",
+      "products": "Products",
+      "home": "Home",
+      "about": "About Us",
+      "projects": "Our Projects",
+      "contact": "Contact Us",
+      "title": "Important Links"
+    },
+    "contacts": {
+      "title": "Contact Us",
+      "location": "Saudi Arabia - Riyadh - Khurais Road",
+      "phone": "0096600000000",
+      "email": "example@gmail.com"
+    },
+    "aboutUs": { "title": "About Us" }
+  },
+
+  "ProjectsPage": {
+    "title": "Projects",
+    "desc": "At Asos, we take pride in showcasing a selection of our outstanding projects that have been successfully executed. These projects reflect our commitment to quality and innovation in design and execution, with each representing a unique experience that embodies our vision of fulfilling our clients' aspirations. Explore our diverse projects that highlight our expertise in providing comprehensive construction solutions",
+    "showMoreBtn": "Show More",
+    "done": "Finished Projects",
+    "inprocces": "In Procces Projects",
+    "contact": {
+      "title": "Contact Us",
+      "desc": "For any inquiries or more information, feel free to reach out to us. Our team is ready to assist you and answer all your questions"
+    }
+  },
+
+  "ProjectDetailsPage": {
+    "projectTime": "Duration of Execution",
+    "projectType": "Project Type",
+    "status": "Project Status",
+    "location": "Location",
+    "target": "Project Stages",
+    "solution": "Facilities And Services",
+    "result": "Certificates And Licenses",
+    "contact": "Start your journey to success! Contact us to help you achieve your goals"
+  },
+  "contactUsPopup": {
+    "one": "Hey There",
+    "two": "How can we help you ?",
+    "contact": "Contact Us"
+  },
+
+  "RealEstateCard": { "details": "Details" },
+
+  "Inspection": {
+    "title": "If you have a property you wish to list, request an inspection now to have it accurately evaluated and prepared for the best presentation.",
+    "button": "Inspection Request"
+  },
+
+  "OurSteps": {
+    "title": "Our Steps in Real Estate Marketing",
+    "desc": "We follow professional steps to ensure your property is marketed with the highest level of efficiency and success."
+  },
+  "statistics": {
+    "pretitle": "Your Real Estate Journey Starts Here",
+    "review": "Customer Reviews",
+    "rent": "Properties Rented",
+    "sold": "Properties Sold",
+    "happy": "Happy Clients"
+  },
+  "SearchComponent": {
+    "cityPlaceholder": "Enter city",
+    "propertyTypePlaceholder": "Property type",
+    "pricePlaceholder": "Enter price",
+    "searchButton": "Search"
+  },
+
+  "FieldsPage": {
+    "category": {
+      "all": "All"
+    }
+  },
+  "Availability": {
+    "saleavailable": "For Sale",
+    "salenotAvailable": "Sold",
+    "available": "Available for Rent",
+    "notAvailable": "Rented"
+  },
+  "Errors": {
+    "fetchDataError": "Error while fetching data"
+  },
+  "Gallery": {
+    "rent": { "title": "For Rent" },
+    "sale": { "title": "For Sale" }
+  },
+
+  "GalleryDescription": {
+    "location": "Location",
+    "viewLocation": "View Location",
+    "currency": "SR",
+    "meter": "m",
+    "title": "Real Estate Description",
+    "offerType": "Offer Type:",
+    "space": "Space:",
+    "realEstateType": "Real Estate Type:",
+    "furnishing": "Furnishing:",
+    "floor": "Floor:",
+    "finishing": "Finishing:",
+    "rooms": "Number of Rooms:",
+    "bathrooms": "Bathrooms:"
+  },
+
+  "ReservationForm": {
+    "bookNow": "Book Now",
+    "description": "Book now, choose a suitable time and date, and we will contact you to confirm the reservation and provide necessary details.",
+    "nameLabel": "Name",
+    "phoneLabel": "Phone Number",
+    "dateLabel": "Date",
+    "timeLabel": "Time",
+    "namePlaceholder": "Enter your name",
+    "phonePlaceholder": "Enter your phone number",
+    "datePlaceholder": "Choose a date",
+    "submitButton": "Confirm Reservation",
+    "nameError": "Name is required",
+    "phoneError": "Phone is required",
+    "dateError": "Date is required",
+    "timeError": "Time is required",
+    "successMessage": "Reservation sent successfully!",
+    "errorMessage": "Failed to send reservation. Please try again.",
+    "unexpectedError": "An unexpected error occurred. Please try again."
+  },
+  "RandoSection": {
+    "similarProperties": "Similar Properties"
+  },
+
+  "ContactUs": {
+    "title": "Contact Us",
+    "description": "We welcome all your inquiries and are ready to provide assistance around the clock. If you have any questions about our services or would like to book an appointment, do not hesitate to contact us.",
+    "socialsTitle": "Visit our page on"
+  },
+  "ContactCard": {
+    "addressTitle": "Address",
+    "addressIconAlt": "Address Icon",
+    "emailTitle": "Email",
+    "emailIconAlt": "Email Icon",
+    "phoneTitle": "Phone",
+    "phoneIconAlt": "Phone Icon"
+  },
+
+  "form": {
+    "datePlaceholder": "Please choose Date first to enable time",
+    "descriptionRequired": "Description is required",
+    "phoneMinLength": "Please enter a valid phone number",
+    "offerTypeRequired": "Offer Type Required",
+    "imageRequired": "Image is Required",
+    "submit": "Submit",
+    "title": "Inspection Request Form",
+    "description": "Fill in the required information to submit an inspection request. We will contact you soon to arrange a visit to the property for a detailed inspection.",
+    "nameLabel": "Name",
+    "namePlaceholder": "Enter your name",
+    "nameRequired": "Name is required",
+    "phoneLabel": "Phone Number",
+    "phonePlaceholder": "Enter your phone number",
+    "phoneRequired": "Phone number is required",
+    "addressLabel": "Address",
+    "addressPlaceholder": "Enter your address",
+    "addressRequired": "Address is required",
+    "ownershipLabel": "Ownership",
+    "ownershipPlaceholder": "Enter ownership",
+    "ownershipRequired": "Ownership is required",
+    "date": "Date",
+    "time": "Time",
+    "dateRequired": "Date is required",
+    "timeRequired": "Time is required",
+    "offerTypeLabel": "Offer Type",
+    "offerTypeSale": "For Sale",
+    "offerTypeRent": "For Rent",
+    "descriptionLabel": "Description",
+    "descriptionPlaceholder": "Please provide a detailed description of the property, including its type (apartment, villa, office), area, condition (new/used), and any additional features (e.g., garden, swimming pool, or proximity to services).",
+    "successMessage": "Inspection request submitted successfully!",
+    "errorMessage": "Failed to submit inspection request. Please try again.",
+    "imageslabel": "Upload Images",
+
+    "imagesdescription": "Please upload 3 clear images of the property, including its interior and exterior facade. High-quality images are preferred to facilitate the inspection process.",
+    "upload": "Upload",
+    "button": "Upload"
+  },
+  "SearchPage": {
+    "noResults": "No results found.",
+    "noResultsImageAlt": "No results available"
+  },
+
+  "FilterComponent": {
+    "rent": "Rent",
+    "sale": "Sale",
+    "cityPlaceholder": "Enter city",
+    "propertyTypePlaceholder": "Property",
+    "pricePlaceholder": "Enter price",
+    "searchIconAlt": "Search icon"
+  },
+
+  "BookingPreview": {
+    "imageAlt": "House image",
+    "description": "If you have chosen a property that suits you, you can now request to reserve it easily to secure it as soon as possible.",
+    "buttonText": "Request Reservation"
+  },
+  "company": { "title": "Dalelal Jiwa" },
+
+  "PlainSocialLinks": {
+    "defaultShareText": "Check out this property!",
+    "shareTitle": "Property Details",
+    "shareSuccess": "Content shared successfully!",
+    "clipboardSuccess": "Link copied to clipboard!",
+    "clipboardError": "Failed to copy the link.",
+    "shareAlt": "Share"
+  },
+  "PropertyPage": {
+    "noResults": "There Are No Properties Available For The Moment"
+  },
+  "partners": {
+    "title": "Success Partners",
+    "desc": "Success is not achieved individually, but is the result of strong, trustworthy, and committed partnerships."
+  },
+  "partinersSection": {
+    "title": "Who referred you to us?",
+    "description": "If you reached this property through one of our partners, please click on the appropriate partner to confirm the source and benefit from the available offer."
+  }
+}

@@ -1,0 +1,6 @@
+.footerBg {
+  z-index: -2;
+}
+.footerOverlay {
+  z-index: -1;
+}
