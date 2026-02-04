@@ -70,7 +70,7 @@ const getRealEstateDetails = async (id, locale) => {
 
     return data;
   } catch (error) {
-    console.error('Error fetching blog:', error);
+    console.error('Error fetching property details:', error);
     notFound();
   }
 };
@@ -107,10 +107,10 @@ const relatedRealEstates = async (id, locale) => {
 export default function ForRentDetails({ params }) {
   const t = useTranslations();
 
-  return <ForSaleDetailsContent t={t} params={params} />;
+  return <ForRentDetailsContent t={t} params={params} />;
 }
 
-const ForSaleDetailsContent = async ({ t, params }) => {
+const ForRentDetailsContent = async ({ t, params }) => {
   try {
     const locale = params.locale;
     const cookieStore = cookies();

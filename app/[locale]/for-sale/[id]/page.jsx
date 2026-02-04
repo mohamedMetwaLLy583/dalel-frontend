@@ -70,7 +70,7 @@ const getRealEstateDetails = async (id, locale) => {
 
     return data;
   } catch (error) {
-    console.error('Error fetching blog:', error);
+    console.error('Error fetching property details:', error);
     notFound();
   }
 };

@@ -13,6 +13,7 @@ export default function SearchComponent({ locale, transactionType }) {
   const [height, setHeight] = useState("56px");
 
   const router = useRouter();
+  const isRTL = locale === "ar";
 
   const customStyles = {
     control: (base) => ({
@@ -59,8 +60,6 @@ export default function SearchComponent({ locale, transactionType }) {
       display: "none",
     }),
   };
-
-  const isRTL = locale === "ar";
 
   useEffect(() => {
     // Fetch property types based on locale

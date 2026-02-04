@@ -83,6 +83,7 @@ const SearchPage = ({ params, searchParams }) => {
                   reservation={property?.reservations_count}
                   view={property?.view_count}
                   isAvailable={property?.is_available}
+                  offerType={property?.offer_type}
                 />
               ))}
             </div>

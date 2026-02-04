@@ -106,6 +106,12 @@ export default function ForRentPageContent({ locale }) {
           <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-x-[24px] gap-y-[12px] md:gap-y-[24px] mb-[35px]">
             {data.data.map((data) => (
               <div key={data.id} className="relative">
+                {/* Overlay for not available properties */}
+                {data.is_available === 0 && (
+                  <div className="absolute  bg-black bg-opacity-50 top-0 left-1/2 transform -translate-x-1/2  h-full w-[103%] mx-auto flex items-center justify-center text-white text-lg font-bold z-50 rounded-[5px]">
+                    {t("Availability.notAvailable")}
+                  </div>
+                )}
                 <RealEstateCard
                   title={data.title}
                   description={data.address}
