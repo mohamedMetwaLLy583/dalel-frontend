@@ -48,6 +48,8 @@
     "formErrorMessage": "There was an error submitting your form.",
     "formSubmitButton": "Submit",
     "formRatingLabel": "Your Rating",
+    "maptitle": "Properties on Map",
+    "mapdesc": "Browse available property locations on the map and find the best fit for you",
     "forsaletitle": "Latest Properties for Sale",
     "forsaledesc": "Discover the best offers for rent now in prime locations and at competitive prices",
     "forrenttitle": "Latest Properties for Rent",

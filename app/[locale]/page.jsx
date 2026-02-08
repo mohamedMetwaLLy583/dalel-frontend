@@ -10,6 +10,7 @@ import ScrollTriggerHOC from './Components/ScrollTriggerHOC/ScrollTriggerHOC';
 import ChooseUsSection from './Components/ChooseUsSection/ChooseUsSection';
 import TestimonialsSection from './Components/TestimonialsSection/TestimonialsSection';
 import PartinersSection from './Components/partinersSection/PartinersSection';
+import MapSection from './Components/MapSection/MapSection';
 
 export default function Home({ params }) {
   return (
@@ -18,6 +19,7 @@ export default function Home({ params }) {
       <AboutUsSection locale={params.locale} />
       <ForRentSection locale={params.locale} />
       <ForSaleSection locale={params.locale} />
+      <MapSection locale={params.locale} />
       <BookOrPreviewsSection locale={params.locale} />
       <MarketingSteps locale={params.locale} />
       <ScrollTriggerHOC>
