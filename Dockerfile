@@ -15,7 +15,8 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 ENV NEXT_TELEMETRY_DISABLED=1
-ENV NEXT_PUBLIC_DBURL=http://backend:8000
+ARG NEXT_PUBLIC_DBURL=http://localhost:8000
+ENV NEXT_PUBLIC_DBURL=${NEXT_PUBLIC_DBURL}
 
 RUN npm run build
 
