@@ -7,7 +7,7 @@ import ChooseUsSection from "../Components/ChooseUsSection/ChooseUsSection";
 
 export async function generateMetadata({ params: { locale } }) {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_DBURL}/api/seo/about_us`,
+    `${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/seo/about_us`,
     {
       next: { revalidate: 0 },
       headers: {
@@ -28,7 +28,7 @@ export async function generateMetadata({ params: { locale } }) {
 
 async function fetchBanner(locale) {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_DBURL}/api/banner/about-us`,
+    `${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/banner/about-us`,
     {
       headers: {
         Accept: "application/json",
@@ -48,7 +48,7 @@ async function fetchBanner(locale) {
 const getAboutDesc = async (locale) => {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_DBURL}/api/about_us`,
+      `${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/about_us`,
       {
         next: { revalidate: 0 },
         headers: {

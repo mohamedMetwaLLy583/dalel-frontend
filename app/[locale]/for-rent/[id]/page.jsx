@@ -12,7 +12,7 @@ import { cookies } from 'next/headers';
 export async function generateMetadata({ params: { locale, id } }) {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_DBURL}/api/properties/${id}`,
+      `${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/properties/${id}`,
       {
         next: { revalidate: 0 },
         headers: {
@@ -49,7 +49,7 @@ export async function generateMetadata({ params: { locale, id } }) {
 const getRealEstateDetails = async (id, locale) => {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_DBURL}/api/properties/${id}`,
+      `${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/properties/${id}`,
       {
         cache: 'no-store',
         headers: {
@@ -78,7 +78,7 @@ const getRealEstateDetails = async (id, locale) => {
 const relatedRealEstates = async (id, locale) => {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_DBURL}/api/properties/related/${id}`,
+      `${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/properties/related/${id}`,
       {
         cache: 'no-store',
         headers: {

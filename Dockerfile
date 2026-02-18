@@ -6,7 +6,7 @@
 FROM node:18-alpine AS deps
 WORKDIR /app
 COPY package.json package-lock.json* ./
-RUN npm ci
+RUN npm install --legacy-peer-deps
 
 # Stage 2: Build the application
 FROM node:18-alpine AS builder
@@ -15,7 +15,8 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 ENV NEXT_TELEMETRY_DISABLED=1
-ENV NEXT_PUBLIC_DBURL=http://backend:8000
+ARG NEXT_PUBLIC_DBURL=http://localhost:8000
+ENV NEXT_PUBLIC_DBURL=${NEXT_PUBLIC_DBURL}
 
 RUN npm run build
 

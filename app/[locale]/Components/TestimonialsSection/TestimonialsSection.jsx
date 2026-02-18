@@ -5,7 +5,7 @@ import TestimonialsSwiper from "../HomeComponents/TestimonialsSwiper/Testimonial
 
 const getReviews = async (locale) => {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_DBURL}/api/reviews`, {
+    const res = await fetch(`${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/reviews`, {
       headers: {
         "Accept-Language": locale,
         Accept: "application/json",

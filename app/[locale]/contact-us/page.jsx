@@ -4,7 +4,7 @@ import ContactUsSection from "../Components/ContactUsSection/ContactUsSection";
 
 export async function generateMetadata({ params: { locale } }) {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_DBURL}/api/seo/contact_us`,
+    `${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/seo/contact_us`,
     {
       next: { revalidate: 0 },
       headers: {
@@ -25,7 +25,7 @@ export async function generateMetadata({ params: { locale } }) {
 
 async function fetchBanner(locale) {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_DBURL}/api/banner/contact-us`,
+    `${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/banner/contact-us`,
     {
       headers: {
         Accept: "application/json",

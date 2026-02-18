@@ -67,7 +67,7 @@ export default function SearchComponent({ locale, transactionType }) {
     const fetchPropertyTypes = async (locale) => {
       try {
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_DBURL}/api/types`,
+          `${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/types`,
           {
             headers: {
               Accept: "application/json",

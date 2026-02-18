@@ -23,7 +23,7 @@ function Footer({ locale }) {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_DBURL}/api/setting`,
+          `${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/setting`,
           {
             headers: {
               "Accept-Language": locale,

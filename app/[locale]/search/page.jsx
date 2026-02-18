@@ -25,7 +25,7 @@ const SearchPage = ({ params, searchParams }) => {
       if (page) queryParams.append('page', page);
 
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_DBURL}/api/properties${
+        `${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/properties${
           queryParams.toString() ? `?${queryParams.toString()}` : ''
         }`,
         {

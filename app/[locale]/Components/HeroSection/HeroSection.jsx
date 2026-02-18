@@ -4,7 +4,7 @@ import FilterComponent from "../FilterComponent/FilterComponent";
 
 async function fetchBanner(locale) {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_DBURL}/api/banner/home`,
+    `${process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL}/api/banner/home`,
     {
       headers: {
         Accept: "application/json",

@@ -18,7 +18,7 @@ export default function ForSaleSection({ locale }) {
       setLoading(true);
       setError(null);
 
-      const apiUrl = `${process.env.NEXT_PUBLIC_DBURL}/api/properties/home/sale`;
+      const apiUrl = `${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/properties/home/sale`;
       console.log("Fetching from:", apiUrl);
 
       const response = await fetch(apiUrl, {

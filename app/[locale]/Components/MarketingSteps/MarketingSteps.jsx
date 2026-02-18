@@ -5,7 +5,7 @@ import MarketingStepsCard from "../CardList/MarketingStepsCard";
 
 const getOurSteps = async (locale) => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_DBURL}/api/our-steps`,
+    `${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/our-steps`,
     {
       headers: {
         Accept: "application/json",

@@ -111,7 +111,7 @@ export default function ApplicationForm({ params }) {
       });
 
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_DBURL}/api/inspection-requests`,
+        `${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/inspection-requests`,
         {
           method: "POST",
           headers: {
