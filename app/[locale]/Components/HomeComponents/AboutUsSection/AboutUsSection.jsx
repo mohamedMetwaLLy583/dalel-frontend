@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 
 const getAboutDesc = async (locale) => {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_DBURL}/api/home`, {
+  const response = await fetch(`${process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL}/api/home`, {
     headers: {
       Accept: "application/json",
       "Accept-Language": locale,

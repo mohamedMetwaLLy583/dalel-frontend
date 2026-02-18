@@ -20,7 +20,7 @@ export default function ForRentPageContent({ locale }) {
     const fetchData = async () => {
       try {
         const endpoint = `${
-          process.env.NEXT_PUBLIC_DBURL
+          (process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)
         }/api/properties?offer_type=rent&page=${page}${
           availabilityFilter !== "all"
             ? `&is_available=${availabilityFilter}`

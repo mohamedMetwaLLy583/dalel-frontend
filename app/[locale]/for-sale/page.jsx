@@ -3,7 +3,7 @@ import ForSalePageContent from "../Components/ForSaleComponents/ForRentPageConte
 
 export async function generateMetadata({ params: { locale } }) {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_DBURL}/api/seo/sale`,
+    `${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/seo/sale`,
     {
       next: { revalidate: 0 },
       headers: {

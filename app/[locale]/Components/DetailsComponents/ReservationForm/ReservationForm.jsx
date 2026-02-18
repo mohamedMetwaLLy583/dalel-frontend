@@ -85,7 +85,7 @@ export default function ReservationForm({ data, locale, partnerId }) {
 
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_DBURL}/api/reservations`,
+        `${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/reservations`,
         {
           method: "POST",
           headers: {

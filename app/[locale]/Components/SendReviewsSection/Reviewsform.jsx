@@ -36,7 +36,7 @@ const ReviewsForm = ({ locale }) => {
       formData.append("rating", rating ?? "");
 
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_DBURL}/api/reviews`,
+        `${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/reviews`,
         {
           method: "POST",
           headers: {

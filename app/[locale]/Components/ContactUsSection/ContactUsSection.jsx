@@ -9,7 +9,7 @@ import Link from "next/link";
 const getContactDetails = async (locale) => {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_DBURL}/api/setting`,
+      `${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/setting`,
       {
         next: { revalidate: 0 },
         headers: {

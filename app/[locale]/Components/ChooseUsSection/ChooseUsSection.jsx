@@ -5,7 +5,7 @@ import ChooseUsCard from "../CardList/ChooseUsCard";
 
 const getChooseUs = async (locale) => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_DBURL}/api/choose-us`,
+    `${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/choose-us`,
     {
       headers: {
         Accept: "application/json",

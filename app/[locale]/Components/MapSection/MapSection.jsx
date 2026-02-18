@@ -22,10 +22,10 @@ export default function MapSection({ locale }) {
     const fetchProperties = async () => {
       try {
         const [saleRes, rentRes] = await Promise.all([
-          fetch(`${process.env.NEXT_PUBLIC_DBURL}/api/properties/home/sale`, {
+          fetch(`${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/properties/home/sale`, {
             headers: { "Accept-Language": locale, Accept: "application/json" },
           }),
-          fetch(`${process.env.NEXT_PUBLIC_DBURL}/api/properties/home/rent`, {
+          fetch(`${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/properties/home/rent`, {
             headers: { "Accept-Language": locale, Accept: "application/json" },
           }),
         ]);

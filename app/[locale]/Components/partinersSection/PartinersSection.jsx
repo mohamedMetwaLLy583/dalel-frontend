@@ -6,7 +6,7 @@ import PartinerSwiper from '../HomeComponents/PartinersSwiper/PartinerSwiper';
 
 const getPartiners = async (locale) => {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_DBURL}/api/partner`, {
+    const res = await fetch(`${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/partner`, {
       headers: {
         'Accept-Language': locale,
         Accept: 'application/json',

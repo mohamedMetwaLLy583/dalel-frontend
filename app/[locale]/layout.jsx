@@ -9,7 +9,7 @@ import Script from "next/script";
 
 export async function generateMetadata({ params: { locale } }) {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_DBURL}/api/seo/home`,
+    `${process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL}/api/seo/home`,
     {
       next: { revalidate: 0 },
       headers: {
@@ -26,7 +26,7 @@ export async function generateMetadata({ params: { locale } }) {
     keywords: data?.keyword,
     siteName: data?.site_name,
     referrer: "origin-when-cross-origin",
-    metadataBase: new URL(`${process.env.NEXT_PUBLIC_DBURL}`),
+    metadataBase: new URL(`${process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL}`),
     openGraph: {
       images: data?.image,
     },

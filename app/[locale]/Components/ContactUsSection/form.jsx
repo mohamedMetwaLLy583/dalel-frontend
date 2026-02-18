@@ -19,7 +19,7 @@ const ContactForm = ({ locale }) => {
   const onSubmit = async (data) => {
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_DBURL}/api/contact-us`,
+        `${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/contact-us`,
         {
           method: "POST",
           headers: {

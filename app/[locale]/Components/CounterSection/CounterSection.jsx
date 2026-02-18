@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 
 const getStatistics = async (locale) => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_DBURL}/api/statistics`,
+    `${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/statistics`,
     {
       headers: {
         Accept: "application/json",

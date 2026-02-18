@@ -19,7 +19,7 @@ export default function ForRentSection({ locale }) {
       setLoading(true);
       setError(null);
 
-      const apiUrl = `${process.env.NEXT_PUBLIC_DBURL}/api/properties/home/rent`;
+      const apiUrl = `${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/properties/home/rent`;
       console.log("Fetching from:", apiUrl);
 
       const response = await fetch(apiUrl, {

@@ -36,7 +36,7 @@ export default function NavBar(props) {
     const fetchLogo = async () => {
       try {
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_DBURL}/api/setting/logo`,
+          `${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/setting/logo`,
           {
             headers: {
               Accept: "application/json",
