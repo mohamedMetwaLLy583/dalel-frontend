@@ -40,6 +40,10 @@ export default function RandoSwiper({ lang, data, parentType }) {
               price={item.price}
               linkRef={`/${lang}/${parentType}/${item.id}`}
               image={item.image}
+              area={item.area}
+              rooms={item.rooms}
+              bathrooms={item.bathrooms}
+              addedBy={item.added_by}
             />
           </SwiperSlide>
         ))}

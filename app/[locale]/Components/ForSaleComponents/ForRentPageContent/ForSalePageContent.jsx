@@ -20,7 +20,7 @@ export default function ForSalePageContent({ locale }) {
     const fetchData = async () => {
       try {
         const endpoint = `${
-          (process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)
+          process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL
         }/api/properties?offer_type=sale&page=${page}${
           availabilityFilter !== "all"
             ? `&is_available=${availabilityFilter}`
@@ -120,6 +120,10 @@ export default function ForSalePageContent({ locale }) {
                   view={data.view_count}
                   isAvailable={data.is_available}
                   offerType={data.offer_type}
+                  area={data.area}
+                  rooms={data.rooms}
+                  bathrooms={data.bathrooms}
+                  addedBy={data.added_by}
                 />
               </div>
             ))}

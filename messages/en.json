@@ -277,7 +277,8 @@
     "floor": "Floor:",
     "finishing": "Finishing:",
     "rooms": "Number of Rooms:",
-    "bathrooms": "Bathrooms:"
+    "bathrooms": "Bathrooms:",
+    "addedBy": "Added By:"
   },
 
   "ReservationForm": {
@@ -356,7 +357,13 @@
 
     "imagesdescription": "Please upload 3 clear images of the property, including its interior and exterior facade. High-quality images are preferred to facilitate the inspection process.",
     "upload": "Upload",
-    "button": "Upload"
+    "button": "Upload",
+    "confirmationTitle": "Booking Confirmation",
+    "confirmationName": "Name:",
+    "confirmationPhone": "Phone:",
+    "confirmationDate": "Date:",
+    "confirmationTime": "Time:",
+    "confirmationClose": "Close"
   },
   "SearchPage": {
     "noResults": "No results found.",

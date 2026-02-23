@@ -51,8 +51,8 @@ export default function GalleryDescription({ data, locale, title }) {
                 {data.offer_type === "rent"
                   ? t("FilterComponent.rent")
                   : data.offer_type === "sale"
-                  ? t("FilterComponent.sale")
-                  : data.offer_type}
+                    ? t("FilterComponent.sale")
+                    : data.offer_type}
               </p>
             )}
           </div>
@@ -175,6 +175,19 @@ export default function GalleryDescription({ data, locale, title }) {
             >
               {t("GalleryDescription.viewLocation")}
             </a>
+          </div>
+        )}
+        {data.added_by && (
+          <div className="items-center flex flex-row gap-x-[8px] md:gap-x-[24px]">
+            <div className="flex flex-row gap-x-[8px]">
+              <img src="/detailspage/showtype.svg" alt="added_by" />
+              <p className="text-custom-maincolor font-normal text-[10px] xs:text-[11px] md:text-[16px] leading-[17.86px] ">
+                {t("GalleryDescription.addedBy")}
+              </p>
+            </div>
+            <p className="font-bold leading-[17.86px] text-[10px] xs:text-[11px] md:text-[16px] text-custom-gray525">
+              {data.added_by}
+            </p>
           </div>
         )}
       </div>

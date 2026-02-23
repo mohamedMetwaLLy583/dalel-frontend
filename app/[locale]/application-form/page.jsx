@@ -9,6 +9,7 @@ import Image from "next/image";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useTranslations } from "next-intl";
+import ConfirmationModal from "../Components/ConfirmationModal";
 
 export default function ApplicationForm({ params }) {
   const locale = params.locale;
@@ -30,6 +31,8 @@ export default function ApplicationForm({ params }) {
   const [isTimePickerDisabled, setIsTimePickerDisabled] = useState(true);
   const [timeError, setTimeError] = useState(false);
   const [dateError, setDateError] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [submissionData, setSubmissionData] = useState({});
 
   const handleDateChange = (date) => {
     setHijriDate(date);
@@ -65,7 +68,7 @@ export default function ApplicationForm({ params }) {
       // Update the image form value
       setFormValue(
         "images",
-        updatedImages.map((img) => img?.file).filter(Boolean)
+        updatedImages.map((img) => img?.file).filter(Boolean),
       );
     };
     reader.readAsDataURL(file);
@@ -111,7 +114,7 @@ export default function ApplicationForm({ params }) {
       });
 
       const response = await fetch(
-        `${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/inspection-requests`,
+        `${process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL}/api/inspection-requests`,
         {
           method: "POST",
           headers: {
@@ -119,7 +122,7 @@ export default function ApplicationForm({ params }) {
             "Accept-Language": locale,
           },
           body: formData,
-        }
+        },
       );
 
       if (!response.ok) {
@@ -130,6 +133,13 @@ export default function ApplicationForm({ params }) {
       }
 
       toast.success(t("form.successMessage"));
+      setSubmissionData({
+        name: data["name"],
+        phone: data["phone"],
+        date: data["date"],
+        time: selectedTime,
+      });
+      setIsModalOpen(true);
       reset();
       setImages([null, null, null]);
       setHijriDate(null);
@@ -415,6 +425,12 @@ export default function ApplicationForm({ params }) {
           {t("form.button")}
         </button>
       </form>
+      <ConfirmationModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        data={submissionData}
+        locale={locale}
+      />
     </div>
   );
 }

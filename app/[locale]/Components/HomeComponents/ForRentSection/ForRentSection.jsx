@@ -19,7 +19,7 @@ export default function ForRentSection({ locale }) {
       setLoading(true);
       setError(null);
 
-      const apiUrl = `${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/properties/home/rent`;
+      const apiUrl = `${process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL}/api/properties/home/rent`;
       console.log("Fetching from:", apiUrl);
 
       const response = await fetch(apiUrl, {
@@ -33,7 +33,9 @@ export default function ForRentSection({ locale }) {
       console.log("Response status:", response.status);
 
       if (!response.ok) {
-        throw new Error(`Failed to fetch: ${response.status} ${response.statusText}`);
+        throw new Error(
+          `Failed to fetch: ${response.status} ${response.statusText}`,
+        );
       }
 
       const result = await response.json();
@@ -66,7 +68,9 @@ export default function ForRentSection({ locale }) {
             linkRef={`/${locale}/for-rent`}
           />
           <div className="flex justify-center items-center h-[200px]">
-            <p className="text-gray-500">{t("Common.loading") || "Loading..."}</p>
+            <p className="text-gray-500">
+              {t("Common.loading") || "Loading..."}
+            </p>
           </div>
         </div>
       </section>
@@ -102,7 +106,9 @@ export default function ForRentSection({ locale }) {
             linkRef={`/${locale}/for-rent`}
           />
           <div className="flex justify-center items-center h-[200px]">
-            <p className="text-gray-500">{t("PropertyPage.noResults") || "No properties available"}</p>
+            <p className="text-gray-500">
+              {t("PropertyPage.noResults") || "No properties available"}
+            </p>
           </div>
         </div>
       </section>
@@ -118,41 +124,45 @@ export default function ForRentSection({ locale }) {
           linkRef={`/${locale}/for-rent`}
         />
         <Swiper
-            slidesPerView={Math.min(slidesPerView, 5)}
-            spaceBetween={24}
-            grabCursor={true}
-            loop={slidesPerView > 2}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-              waitForTransition: false,
-            }}
-            breakpoints={{
-              320: { slidesPerView: 1 },
-              640: { slidesPerView: 2 },
-              768: { slidesPerView: 3 },
-              1024: { slidesPerView: 3 },
-              1280: { slidesPerView: 4 },
-            }}
-            modules={[Navigation, Autoplay]}
-          >
-            {data?.map((item, index) => (
-              <SwiperSlide key={index}>
-                <RealEstateCard
-                  title={item.title}
-                  description={item.address}
-                  price={item.price}
-                  linkRef={`/${locale}/for-rent/${item.id}`}
-                  image={item.image}
-                  reservation={item.reservations_count}
-                  view={item.view_count}
-                  isAvailable={item.is_available}
-                  offerType={item.offer_type}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      </section>
+          slidesPerView={Math.min(slidesPerView, 5)}
+          spaceBetween={24}
+          grabCursor={true}
+          loop={slidesPerView > 2}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+            waitForTransition: false,
+          }}
+          breakpoints={{
+            320: { slidesPerView: 1 },
+            640: { slidesPerView: 2 },
+            768: { slidesPerView: 3 },
+            1024: { slidesPerView: 3 },
+            1280: { slidesPerView: 4 },
+          }}
+          modules={[Navigation, Autoplay]}
+        >
+          {data?.map((item, index) => (
+            <SwiperSlide key={index}>
+              <RealEstateCard
+                title={item.title}
+                description={item.address}
+                price={item.price}
+                linkRef={`/${locale}/for-rent/${item.id}`}
+                image={item.image}
+                reservation={item.reservations_count}
+                view={item.view_count}
+                isAvailable={item.is_available}
+                offerType={item.offer_type}
+                area={item.area}
+                rooms={item.rooms}
+                bathrooms={item.bathrooms}
+                addedBy={item.added_by}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </section>
   );
 }

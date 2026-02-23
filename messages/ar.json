@@ -273,7 +273,8 @@
     "floor": "الدور:",
     "finishing": "التشطيب:",
     "rooms": "عدد الغرف:",
-    "bathrooms": "الحمامات:"
+    "bathrooms": "الحمامات:",
+    "addedBy": "تمت الإضافة بواسطة:"
   },
 
   "ReservationForm": {
@@ -357,7 +358,13 @@
     "imageslabel": "تحميل صور العقار",
     "imagesdescription": "يرجى تحميل  3 صور واضحة للعقار، بما في ذلك واجهته الداخلية والخارجية. يُفضل أن تكون الصور بأعلى جودة لتسهيل عملية المعاينة",
     "upload": "تحميل صورة",
-    "button": "رفع المعاينة"
+    "button": "رفع المعاينة",
+    "confirmationTitle": "تأكيد البيانات",
+    "confirmationName": "الاسم:",
+    "confirmationPhone": "الهاتف:",
+    "confirmationDate": "التاريخ:",
+    "confirmationTime": "الوقت:",
+    "confirmationClose": "إغلاق"
   },
   "SearchPage": {
     "noResults": "لم يتم العثور على نتائج.",

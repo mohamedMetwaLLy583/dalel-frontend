@@ -9,6 +9,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useTranslations } from "next-intl";
 import "dayjs/locale/ar";
+import ConfirmationModal from "../../ConfirmationModal";
 
 export default function ReservationForm({ data, locale, partnerId }) {
   const isRTL = locale === "ar";
@@ -24,6 +25,8 @@ export default function ReservationForm({ data, locale, partnerId }) {
   const [selectedTime, setSelectedTime] = useState(null);
   const [unavailableTimes, setUnavailableTimes] = useState([]);
   const [isTimePickerDisabled, setIsTimePickerDisabled] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [submissionData, setSubmissionData] = useState({});
 
   const reservedDates = data.reservedDates || [];
   const blockedDates = data.blocked_dates || [];
@@ -85,7 +88,7 @@ export default function ReservationForm({ data, locale, partnerId }) {
 
     try {
       const response = await fetch(
-        `${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/reservations`,
+        `${process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL}/api/reservations`,
         {
           method: "POST",
           headers: {
@@ -100,6 +103,13 @@ export default function ReservationForm({ data, locale, partnerId }) {
       if (response.ok) {
         const responseData = await response.json();
         toast.success(t("ReservationForm.successMessage"));
+        setSubmissionData({
+          name: formData.name,
+          phone: formData.phone,
+          date: formData.hijriDate,
+          time: formData.time,
+        });
+        setIsModalOpen(true);
         reset();
         setHijriDate(new DateObject({ calendar: arabic }));
         setSelectedTime(null);
@@ -288,6 +298,12 @@ export default function ReservationForm({ data, locale, partnerId }) {
           {t("ReservationForm.submitButton")}
         </button>
       </form>
+      <ConfirmationModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        data={submissionData}
+        locale={locale}
+      />
     </div>
   );
 }

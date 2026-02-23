@@ -1,9 +1,9 @@
-'use client';
-import React, { useEffect, useState } from 'react';
-import LoadingCircle from '../Components/LoadingCircle/LoadingCircle';
-import RealEstateCard from '../Components/CardList/RealEstateCard';
-import PaginationComponent from './PaginationComponent'; // Import the pagination component
-import { useTranslations } from 'next-intl';
+"use client";
+import React, { useEffect, useState } from "react";
+import LoadingCircle from "../Components/LoadingCircle/LoadingCircle";
+import RealEstateCard from "../Components/CardList/RealEstateCard";
+import PaginationComponent from "./PaginationComponent"; // Import the pagination component
+import { useTranslations } from "next-intl";
 
 const SearchPage = ({ params, searchParams }) => {
   const { locale } = params;
@@ -17,23 +17,23 @@ const SearchPage = ({ params, searchParams }) => {
   const fetchProperties = async (page = 1) => {
     try {
       const queryParams = new URLSearchParams();
-      if (type_id) queryParams.append('type_id', type_id);
+      if (type_id) queryParams.append("type_id", type_id);
       if (transactionType)
-        queryParams.append('transactionType', transactionType);
-      if (search) queryParams.append('search', search);
-      if (price) queryParams.append('price', price);
-      if (page) queryParams.append('page', page);
+        queryParams.append("transactionType", transactionType);
+      if (search) queryParams.append("search", search);
+      if (price) queryParams.append("price", price);
+      if (page) queryParams.append("page", page);
 
       const response = await fetch(
-        `${(process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL)}/api/properties${
-          queryParams.toString() ? `?${queryParams.toString()}` : ''
+        `${process.env.DB_URL || process.env.NEXT_PUBLIC_DBURL}/api/properties${
+          queryParams.toString() ? `?${queryParams.toString()}` : ""
         }`,
         {
           headers: {
-            'Accept-Language': locale,
-            Accept: 'application/json',
+            "Accept-Language": locale,
+            Accept: "application/json",
           },
-        }
+        },
       );
 
       const result = await response.json();
@@ -41,7 +41,7 @@ const SearchPage = ({ params, searchParams }) => {
       setPaginationData(result.meta);
       setLoading(false);
     } catch (error) {
-      console.error('Error fetching properties:', error);
+      console.error("Error fetching properties:", error);
       setLoading(false);
     }
   };
@@ -65,11 +65,11 @@ const SearchPage = ({ params, searchParams }) => {
   }
 
   return (
-    <div className='py-[52px] md:py-[105px]'>
-      <div className='custom_container'>
+    <div className="py-[52px] md:py-[105px]">
+      <div className="custom_container">
         {properties?.length > 0 ? (
           <div>
-            <div className='grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-[24px]'>
+            <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-[24px]">
               {properties?.map((property) => (
                 <RealEstateCard
                   key={property?.id}
@@ -78,16 +78,20 @@ const SearchPage = ({ params, searchParams }) => {
                   description={property?.address}
                   price={property?.price}
                   linkRef={`/${locale}/${
-                    transactionType === 'sale' ? 'for-sale' : 'for-rent'
+                    transactionType === "sale" ? "for-sale" : "for-rent"
                   }/${property?.id}`}
                   reservation={property?.reservations_count}
                   view={property?.view_count}
                   isAvailable={property?.is_available}
+                  area={property?.area}
+                  rooms={property?.rooms}
+                  bathrooms={property?.bathrooms}
+                  addedBy={property?.added_by}
                 />
               ))}
             </div>
             {paginationData.last_page > 1 && (
-              <div className='flex items-center justify-start mt-[20px]'>
+              <div className="flex items-center justify-start mt-[20px]">
                 <PaginationComponent
                   locale={locale}
                   currentPage={paginationData.current_page}
@@ -98,9 +102,9 @@ const SearchPage = ({ params, searchParams }) => {
             )}
           </div>
         ) : (
-          <div className='flex flex-col items-center justify-center h-[300px]'>
-            <p className='text-center text-[18px] md:text-[22px] text-custom-gray5D font-semibold'>
-              {t('SearchPage.noResults')}
+          <div className="flex flex-col items-center justify-center h-[300px]">
+            <p className="text-center text-[18px] md:text-[22px] text-custom-gray5D font-semibold">
+              {t("SearchPage.noResults")}
             </p>
           </div>
         )}
